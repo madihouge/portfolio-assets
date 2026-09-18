@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+  --bg:#FBF8F8;
+  --ink:#241f1a;
+  --sub:#6b6058;
+  --accent:#c1542a;
+  --accent-dark:#a8461f;
+  --line:#e7e0d6;
+  --tint-peach:#f7e6d6;
+  --tint-blue:#e6ebef;
+  --tint-olive:#ece7d8;
+  --cream:#f3ece1;
+  --maxw:1400px;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Poppins',sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+
+.wrap{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 48px;
+}
+
+.serif{font-family:'Playfair Display',serif;}
+
+/* ---------- header ---------- */
+.site-header{
+  padding:34px 0 20px;
+}
+.site-header .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.site-header .logo img{
+  height:64px;
+  width:auto;
+}
+.site-nav{
+  display:flex;
+  align-items:center;
+  gap:44px;
+}
+.site-nav a{
+  font-size:13px;
+  letter-spacing:1.5px;
+  font-weight:500;
+  color:var(--ink);
+  text-decoration:none;
+  padding-bottom:6px;
+}
+.site-nav a.active{
+  font-weight:600;
+  border-bottom:2px solid var(--accent);
+}
+
+/* ---------- footer ---------- */
+.site-footer{
+  border-top:1px solid var(--line);
+  margin-top:44px;
+  padding:32px 0 26px;
+}
+.site-footer .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  row-gap:14px;
+}
+.site-footer .flogo{
+  display:flex;
+  align-items:center;
+}
+.site-footer .flogo img{
+  height:44px;
+  width:auto;
+}
+.site-footer nav{
+  display:flex;
+  gap:30px;
+}
+.site-footer nav a{
+  font-size:12.5px;
+  letter-spacing:1px;
+  font-weight:500;
+  text-decoration:none;
+  color:var(--ink);
+}
+.site-footer .fright{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.site-footer .fright .email{
+  font-size:12.5px;
+  color:var(--ink);
+}
+.site-footer .social{
+  display:flex;
+  gap:12px;
+}
+.site-footer .social span{
+  min-width:28px;
+  height:28px;
+  padding:0 8px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  letter-spacing:.5px;
+  font-weight:600;
+  color:var(--sub);
+}
+.site-footer .copy{
+  width:100%;
+  text-align:center;
+  font-size:11px;
+  color:var(--sub);
+  margin-top:16px;
+}
