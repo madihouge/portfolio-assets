@@ -1,6 +1,6 @@
 /* ---------- hero ---------- */
 .hero{
-  margin:6px 0 68px;
+  margin:4px 0 84px;
 }
 .hero img{
   width:100%;
@@ -12,17 +12,17 @@
   display:flex;
   align-items:baseline;
   justify-content:space-between;
-  margin-bottom:22px;
+  margin-bottom:34px;
 }
 .section-head h2{
-  font-size:32px;
+  font-size:44px;
   font-weight:700;
   margin:0;
   letter-spacing:.5px;
 }
 .section-head .viewall{
-  font-size:12px;
-  letter-spacing:1.5px;
+  font-size:15px;
+  letter-spacing:1px;
   font-weight:600;
   text-decoration:none;
 }
@@ -30,12 +30,12 @@
 .work-stack{
   display:flex;
   flex-direction:column;
-  gap:22px;
+  gap:30px;
 }
 
 .work-card{
   border:1px solid var(--line);
-  border-radius:14px;
+  border-radius:16px;
   overflow:hidden;
   background:#fff;
 }
@@ -45,7 +45,7 @@
   align-items:stretch;
 }
 .work-card.featured .thumb{
-  width:58%;
+  width:74%;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -53,12 +53,11 @@
 }
 .work-card.featured .thumb img{
   width:100%;
-  height:100%;
-  object-fit:cover;
+  height:auto;
 }
 .work-card.featured .info{
-  width:42%;
-  padding:0 46px;
+  width:26%;
+  padding:0 52px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -67,7 +66,7 @@
 .work-row{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:22px;
+  gap:30px;
 }
 .work-row .work-card{
   display:flex;
@@ -79,23 +78,23 @@
   display:block;
 }
 .work-row .info{
-  padding:24px 30px 28px;
+  padding:30px 36px 34px;
 }
 
 .info h3{
-  font-size:25px;
+  font-size:33px;
   font-weight:700;
-  margin:0 0 6px;
+  margin:0 0 8px;
 }
 .info .tag{
   color:var(--accent);
-  font-size:11px;
+  font-size:13px;
   letter-spacing:2px;
   font-weight:600;
-  margin-bottom:16px;
+  margin-bottom:22px;
 }
 .info .view{
-  font-size:12px;
+  font-size:14px;
   font-weight:600;
   letter-spacing:.5px;
   text-decoration:none;
@@ -106,52 +105,52 @@
 
 /* ---------- what i do ---------- */
 .what-i-do{
-  margin:78px 0 34px;
+  margin:104px 0 44px;
   text-align:center;
 }
 .what-i-do .heading{
-  font-size:28px;
+  font-size:38px;
   font-weight:700;
-  margin-bottom:2px;
+  margin-bottom:4px;
 }
 .what-i-do .spark{
   color:var(--accent);
-  font-size:14px;
-  margin-bottom:30px;
+  font-size:18px;
+  margin-bottom:40px;
   display:block;
 }
 .wid-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:22px;
+  gap:28px;
 }
 .wid-card{
-  border-radius:14px;
-  padding:34px 30px;
+  border-radius:16px;
+  padding:46px 40px;
   text-align:left;
 }
 .wid-card.peach{background:var(--tint-peach);}
 .wid-card.blue{background:var(--tint-blue);}
 .wid-card.olive{background:var(--tint-olive);}
 .wid-card img{
-  height:48px;
+  height:64px;
   width:auto;
-  margin-bottom:20px;
+  margin-bottom:26px;
 }
 .wid-card h4{
-  font-size:18px;
+  font-size:23px;
   font-weight:700;
-  margin:0 0 8px;
+  margin:0 0 10px;
   letter-spacing:.5px;
 }
 .wid-card p{
-  font-size:13px;
+  font-size:15px;
   color:var(--sub);
   line-height:1.6;
-  margin:0 0 16px;
+  margin:0 0 20px;
 }
 .wid-card .caps{
-  font-size:10.5px;
+  font-size:12px;
   letter-spacing:1px;
   font-weight:600;
   color:var(--accent-dark);
@@ -161,16 +160,15 @@
 /* ---------- cta ---------- */
 .cta{
   background:var(--cream);
-  border-radius:20px;
-  margin:34px 0 10px;
+  border-radius:22px;
+  margin:44px 0 14px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   overflow:hidden;
-  padding-left:0;
 }
 .cta .cta-art-left{
-  width:190px;
+  width:260px;
   flex-shrink:0;
   align-self:stretch;
   display:flex;
@@ -182,35 +180,35 @@
 }
 .cta .cta-text{
   flex:1;
-  padding:0 20px;
+  padding:0 24px;
 }
 .cta .cta-text h3{
-  font-size:30px;
+  font-size:40px;
   font-weight:700;
-  margin:0 0 10px;
+  margin:0 0 14px;
 }
 .cta .cta-text p{
-  font-size:13.5px;
+  font-size:16px;
   color:var(--sub);
   line-height:1.6;
-  margin:0 0 20px;
-  max-width:340px;
+  margin:0 0 26px;
+  max-width:400px;
 }
 .btn{
   display:inline-flex;
   align-items:center;
-  gap:8px;
+  gap:9px;
   background:var(--accent);
   color:#fff;
-  font-size:12.5px;
+  font-size:14px;
   letter-spacing:1px;
   font-weight:600;
-  padding:14px 22px;
-  border-radius:7px;
+  padding:17px 26px;
+  border-radius:8px;
   text-decoration:none;
 }
 .cta .cta-art-right{
-  width:260px;
+  width:340px;
   flex-shrink:0;
   align-self:flex-end;
 }

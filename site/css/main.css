@@ -11,7 +11,7 @@
   --tint-blue:#e6ebef;
   --tint-olive:#ece7d8;
   --cream:#f3ece1;
-  --maxw:1400px;
+  --maxw:1720px;
 }
 
 *{box-sizing:border-box;}
@@ -28,14 +28,14 @@ a{color:inherit;}
 .wrap{
   max-width:var(--maxw);
   margin:0 auto;
-  padding:0 48px;
+  padding:0 68px;
 }
 
 .serif{font-family:'Playfair Display',serif;}
 
 /* ---------- header ---------- */
 .site-header{
-  padding:34px 0 20px;
+  padding:46px 0 30px;
 }
 .site-header .wrap{
   display:flex;
@@ -43,21 +43,21 @@ a{color:inherit;}
   justify-content:space-between;
 }
 .site-header .logo img{
-  height:64px;
+  height:104px;
   width:auto;
 }
 .site-nav{
   display:flex;
   align-items:center;
-  gap:44px;
+  gap:52px;
 }
 .site-nav a{
-  font-size:13px;
-  letter-spacing:1.5px;
+  font-size:18px;
+  letter-spacing:1px;
   font-weight:500;
   color:var(--ink);
   text-decoration:none;
-  padding-bottom:6px;
+  padding-bottom:8px;
 }
 .site-nav a.active{
   font-weight:600;
@@ -67,31 +67,31 @@ a{color:inherit;}
 /* ---------- footer ---------- */
 .site-footer{
   border-top:1px solid var(--line);
-  margin-top:44px;
-  padding:32px 0 26px;
+  margin-top:50px;
+  padding:38px 0 30px;
 }
 .site-footer .wrap{
   display:flex;
   align-items:center;
   justify-content:space-between;
   flex-wrap:wrap;
-  row-gap:14px;
+  row-gap:16px;
 }
 .site-footer .flogo{
   display:flex;
   align-items:center;
 }
 .site-footer .flogo img{
-  height:44px;
+  height:64px;
   width:auto;
 }
 .site-footer nav{
   display:flex;
-  gap:30px;
+  gap:36px;
 }
 .site-footer nav a{
-  font-size:12.5px;
-  letter-spacing:1px;
+  font-size:15px;
+  letter-spacing:.5px;
   font-weight:500;
   text-decoration:none;
   color:var(--ink);
@@ -99,10 +99,10 @@ a{color:inherit;}
 .site-footer .fright{
   display:flex;
   align-items:center;
-  gap:22px;
+  gap:26px;
 }
 .site-footer .fright .email{
-  font-size:12.5px;
+  font-size:15px;
   color:var(--ink);
 }
 .site-footer .social{
@@ -110,15 +110,15 @@ a{color:inherit;}
   gap:12px;
 }
 .site-footer .social span{
-  min-width:28px;
-  height:28px;
-  padding:0 8px;
-  border-radius:14px;
+  min-width:34px;
+  height:34px;
+  padding:0 9px;
+  border-radius:17px;
   border:1px solid var(--line);
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:10px;
+  font-size:11px;
   letter-spacing:.5px;
   font-weight:600;
   color:var(--sub);
@@ -126,7 +126,7 @@ a{color:inherit;}
 .site-footer .copy{
   width:100%;
   text-align:center;
-  font-size:11px;
+  font-size:12.5px;
   color:var(--sub);
-  margin-top:16px;
+  margin-top:20px;
 }
