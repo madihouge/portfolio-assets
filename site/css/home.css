@@ -1,10 +1,12 @@
-/* ---------- hero ---------- */
-.hero{
-  margin:4px 0 84px;
+/* ---------- hero (full-bleed to viewport edges) ---------- */
+.hero-full{
+  width:100%;
+  margin:6px 0 96px;
 }
-.hero img{
+.hero-full img{
   width:100%;
   height:auto;
+  display:block;
 }
 
 /* ---------- selected work ---------- */
@@ -12,10 +14,10 @@
   display:flex;
   align-items:baseline;
   justify-content:space-between;
-  margin-bottom:34px;
+  margin-bottom:38px;
 }
 .section-head h2{
-  font-size:44px;
+  font-size:48px;
   font-weight:700;
   margin:0;
   letter-spacing:.5px;
@@ -30,7 +32,7 @@
 .work-stack{
   display:flex;
   flex-direction:column;
-  gap:30px;
+  gap:32px;
 }
 
 .work-card{
@@ -66,7 +68,7 @@
 .work-row{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:30px;
+  gap:32px;
 }
 .work-row .work-card{
   display:flex;
@@ -78,23 +80,23 @@
   display:block;
 }
 .work-row .info{
-  padding:30px 36px 34px;
+  padding:32px 38px 36px;
 }
 
 .info h3{
-  font-size:33px;
+  font-size:34px;
   font-weight:700;
-  margin:0 0 8px;
+  margin:0 0 10px;
 }
 .info .tag{
   color:var(--accent);
   font-size:13px;
   letter-spacing:2px;
   font-weight:600;
-  margin-bottom:22px;
+  margin-bottom:24px;
 }
 .info .view{
-  font-size:14px;
+  font-size:14.5px;
   font-weight:600;
   letter-spacing:.5px;
   text-decoration:none;
@@ -105,19 +107,13 @@
 
 /* ---------- what i do ---------- */
 .what-i-do{
-  margin:104px 0 44px;
+  margin:120px 0 48px;
   text-align:center;
 }
 .what-i-do .heading{
-  font-size:38px;
+  font-size:46px;
   font-weight:700;
-  margin-bottom:4px;
-}
-.what-i-do .spark{
-  color:var(--accent);
-  font-size:18px;
-  margin-bottom:40px;
-  display:block;
+  margin-bottom:44px;
 }
 .wid-grid{
   display:grid;
@@ -125,32 +121,42 @@
   gap:28px;
 }
 .wid-card{
-  border-radius:16px;
-  padding:46px 40px;
+  border-radius:18px;
+  padding:40px 38px 34px;
   text-align:left;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:290px;
 }
 .wid-card.peach{background:var(--tint-peach);}
 .wid-card.blue{background:var(--tint-blue);}
 .wid-card.olive{background:var(--tint-olive);}
-.wid-card img{
-  height:64px;
-  width:auto;
-  margin-bottom:26px;
+.wid-top{
+  display:flex;
+  align-items:flex-start;
+  gap:26px;
+  margin-bottom:30px;
 }
-.wid-card h4{
-  font-size:23px;
+.wid-card img{
+  height:82px;
+  width:auto;
+  flex-shrink:0;
+}
+.wid-copy h4{
+  font-size:24px;
   font-weight:700;
   margin:0 0 10px;
   letter-spacing:.5px;
 }
-.wid-card p{
-  font-size:15px;
+.wid-copy p{
+  font-size:16px;
   color:var(--sub);
   line-height:1.6;
-  margin:0 0 20px;
+  margin:0;
 }
 .wid-card .caps{
-  font-size:12px;
+  font-size:13px;
   letter-spacing:1px;
   font-weight:600;
   color:var(--accent-dark);
@@ -160,15 +166,15 @@
 /* ---------- cta ---------- */
 .cta{
   background:var(--cream);
-  border-radius:22px;
-  margin:44px 0 14px;
+  border-radius:24px;
+  margin:72px 0 20px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   overflow:hidden;
 }
 .cta .cta-art-left{
-  width:260px;
+  width:280px;
   flex-shrink:0;
   align-self:stretch;
   display:flex;
@@ -183,16 +189,17 @@
   padding:0 24px;
 }
 .cta .cta-text h3{
-  font-size:40px;
+  font-size:44px;
   font-weight:700;
-  margin:0 0 14px;
+  margin:0 0 16px;
+  line-height:1.15;
 }
 .cta .cta-text p{
-  font-size:16px;
+  font-size:17px;
   color:var(--sub);
   line-height:1.6;
-  margin:0 0 26px;
-  max-width:400px;
+  margin:0 0 28px;
+  max-width:420px;
 }
 .btn{
   display:inline-flex;
@@ -200,15 +207,15 @@
   gap:9px;
   background:var(--accent);
   color:#fff;
-  font-size:14px;
+  font-size:14.5px;
   letter-spacing:1px;
   font-weight:600;
-  padding:17px 26px;
+  padding:18px 28px;
   border-radius:8px;
   text-decoration:none;
 }
 .cta .cta-art-right{
-  width:340px;
+  width:360px;
   flex-shrink:0;
   align-self:flex-end;
 }
