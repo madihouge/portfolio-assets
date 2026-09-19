@@ -43,21 +43,21 @@ a{color:inherit;}
   justify-content:space-between;
 }
 .site-header .logo img{
-  height:136px;
+  height:158px;
   width:auto;
 }
 .site-nav{
   display:flex;
   align-items:center;
-  gap:52px;
+  gap:44px;
 }
 .site-nav a{
-  font-size:19px;
+  font-size:15px;
   letter-spacing:1px;
   font-weight:500;
   color:var(--ink);
   text-decoration:none;
-  padding-bottom:8px;
+  padding-bottom:6px;
 }
 .site-nav a.active{
   font-weight:600;
