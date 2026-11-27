@@ -15,7 +15,6 @@
   --gallery-gap: 8px;
   --gallery-radius: 16px;
   --gallery-margin: clamp(8px, 1.5vw, 25px);
-  --wide-ratio: 16 / 7;                /* full-width 5th tile */
 
   /* Logo: global/1.png is a 6250px square with transparent padding.
      The box below shows its drawn area (x 1317–4653, y 1208–4706). */
@@ -138,11 +137,6 @@ a { color: inherit; }
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: var(--gallery-radius);
-}
-
-.tile--wide {
-  grid-column: 1 / -1;
-  aspect-ratio: var(--wide-ratio);
 }
 
 .tile img {
