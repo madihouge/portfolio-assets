@@ -69,8 +69,8 @@ a { color: inherit; }
   --H: 632;                      /* stage height in design units */
   --u: calc(100cqw / var(--frame));
 
-  --letter-top: 78;
-  --letter-width: 1130;
+  --letter-top: 43;              /* houge-clean.svg has built-in top padding */
+  --letter-width: 1119;
   --scene-top: 283;
   --scene-width: 705;
   --cloud-top: 370;
@@ -331,8 +331,8 @@ a { color: inherit; }
   .hero__stage {
     --frame: 1000;
     --H: 676;
-    --letter-top: 140;
-    --letter-width: 880;
+    --letter-top: 113;
+    --letter-width: 871;
     --scene-top: 326;
     --scene-width: 700;
     --cloud-top: 386;
