@@ -66,15 +66,15 @@ a { color: inherit; }
 .hero__stage {
   /* Design frame (desktop + tablet) */
   --frame: 1665;
-  --H: 712;                      /* stage height in design units */
+  --H: 632;                      /* stage height in design units */
   --u: calc(100cqw / var(--frame));
 
-  --letter-top: 80;
-  --letter-width: 1230;
-  --scene-top: 288;
-  --scene-width: 860;
-  --cloud-top: 400;
-  --cloud-height: 312;
+  --letter-top: 78;
+  --letter-width: 1130;
+  --scene-top: 283;
+  --scene-width: 705;
+  --cloud-top: 370;
+  --cloud-height: 262;
 
   position: relative;
   height: calc(var(--H) * var(--u));
@@ -156,7 +156,7 @@ a { color: inherit; }
 .dot {
   position: absolute;
   left: calc(var(--x) / 1665 * 100%);
-  top: calc(var(--y) / 712 * 100%);
+  top: calc(var(--y) * var(--u));
   transform: translate(-50%, -50%);
 }
 
@@ -181,10 +181,10 @@ a { color: inherit; }
 .lettering {
   position: absolute;
   top: calc(var(--letter-top) * var(--u));
-  left: 50%;
+  left: 0;
+  right: 0;
   width: calc(var(--letter-width) * var(--u));
-  transform: translateX(-50%);
-  margin: 0;
+  margin: 0 auto;
   z-index: 2;
 }
 
@@ -207,10 +207,11 @@ a { color: inherit; }
 .scene {
   position: absolute;
   top: calc(var(--scene-top) * var(--u));
-  left: 50%;
+  left: 0;
+  right: 0;
   width: calc(var(--scene-width) * var(--u));
   height: auto;
-  transform: translateX(-50%);
+  margin: 0 auto;
   z-index: 4;
 }
 
@@ -229,8 +230,8 @@ a { color: inherit; }
   margin: 0;
   font-family: var(--font-script);
   font-weight: 400;
-  font-size: max(1.75vw, 15px);
-  line-height: 1.6;
+  font-size: max(1.6vw, 15px);
+  line-height: 1.45;
   color: var(--plum-dark);
   -webkit-text-stroke: 0.018em currentColor;   /* matches the slightly heavier stroke in the reference */
 }
@@ -322,19 +323,19 @@ a { color: inherit; }
 
 /* Tablet: keep the desktop composition, slightly larger text */
 @media (max-width: 1024px) {
-  .intro__text { font-size: max(2vw, 15px); }
+  .intro__text { font-size: max(1.85vw, 15px); }
 }
 
 /* Mobile: taller hero frame so the artwork can be larger */
 @media (max-width: 640px) {
   .hero__stage {
     --frame: 1000;
-    --H: 790;
+    --H: 676;
     --letter-top: 140;
-    --letter-width: 940;
-    --scene-top: 370;
-    --scene-width: 820;
-    --cloud-top: 500;
+    --letter-width: 880;
+    --scene-top: 326;
+    --scene-width: 700;
+    --cloud-top: 386;
     --cloud-height: 290;
   }
 
@@ -342,7 +343,7 @@ a { color: inherit; }
   .clouds { left: -10%; width: 120%; }
 
   .star,
-  .dot { top: calc(12% + var(--y) / 712 * 44%); }   /* keep them in the sky below the nav row */
+  .dot { top: calc((95 + var(--y) * 0.488) * var(--u)); }   /* same spots as before, below the nav row */
 
   .nav { top: 14px; }
   .nav__links { gap: 14px; }
@@ -359,7 +360,7 @@ a { color: inherit; }
   .star { height: calc(var(--s) * 1.1 * var(--u)); }
 
   .intro { padding-top: 22px; }
-  .intro__text { font-size: 15px; line-height: 1.85; }
+  .intro__text { font-size: 14.5px; line-height: 1.7; }
   .intro__line { display: inline; }
 
   .gallery { grid-template-columns: minmax(0, 1fr); }
