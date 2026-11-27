@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work — Madi Houge</title>
+  <meta name="description" content="Branding, packaging, and illustration work by Madi Houge.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/work.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       HEADER: logo (links home), navigation, social icons
+       ========================================================= -->
+  <header class="topbar">
+    <a class="logo" href="index.html" aria-label="Madi Houge — home">
+      <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/global/1.png" width="6250" height="6250" alt="">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="work.html" aria-current="page">work</a></li>
+        <!-- TODO: change href to "about.html" once the About page exists -->
+        <li><a href="#" data-future-page="about">about</a></li>
+        <!-- TODO: change href to "contact.html" once the Contact page exists -->
+        <li><a href="#" data-future-page="contact">contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Social icons (TODO: add real profile URLs in the href attributes) -->
+    <ul class="social">
+      <li>
+        <a href="#" data-social="instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect class="box" x="1" y="1" width="22" height="22" rx="5"/><rect class="line" x="5" y="5" width="14" height="14" rx="4"/><circle class="line" cx="12" cy="12" r="3.3"/><circle class="dot" cx="16.1" cy="7.9" r="0.95"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-social="linkedin" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect class="box" x="1" y="1" width="22" height="22" rx="5"/><path class="line" d="M7.6 10.4v6.6M7.6 7v.2M11.4 17v-6.6m0 3c0-1.8 1.1-3.1 2.7-3.1s2.4 1.1 2.4 2.9V17"/></svg>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <!-- =========================================================
+       PROJECTS
+       To swap a photo, change the src of its <img>.
+       --pos sets which part of the photo shows in the wide tile.
+       TODO: create the project pages these links point to.
+       ========================================================= -->
+  <main>
+    <h1 class="visually-hidden">Work</h1>
+
+    <section class="projects" aria-label="Projects">
+
+      <!-- Row 1 -->
+      <a class="tile" href="projects/happy-trails.html" style="--pos: 50% 42%">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/happy-trails/hat.png" alt="Happy Trails — embroidered cap" loading="lazy">
+      </a>
+
+      <a class="tile" href="projects/cowgirls-and-angels.html" style="--pos: 50% 40%">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/sticker.png" alt="Cowgirls &amp; Angels — cowboy boot sticker" loading="lazy">
+      </a>
+
+      <!-- Row 2 -->
+      <a class="tile" href="projects/lilac.html" style="--pos: 50% 35%">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/lilac/sign.png" alt="Lilac Beauty — storefront sign" loading="lazy">
+      </a>
+
+      <a class="tile" href="projects/hue-and-you.html" style="--pos: 50% 45%">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/sticker.png" alt="Hue and You — character stickers" loading="lazy">
+      </a>
+
+      <!-- Row 3 -->
+      <a class="tile" href="projects/love-mads.html" style="--pos: 50% 50%">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/love-mads/sitcker.png" alt="Love Mads — round sticker" loading="lazy">
+      </a>
+
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

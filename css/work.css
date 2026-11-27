@@ -1,0 +1,160 @@
+/* ==========================================================
+   Madi Houge — Work page
+   Matches work/work- reference.png (1666px wide).
+   ========================================================== */
+
+:root {
+  --cream: #FEF7E5;          /* page background            */
+  --plum: #670824;           /* nav text, pill, icons      */
+
+  --font-ui: "Figtree", "Helvetica Neue", Arial, sans-serif;
+
+  --side: clamp(14px, 2.35vw, 40px);   /* outer page margin  */
+  --gap: 10px;                         /* between tiles      */
+  --radius: 20px;
+  --tile-ratio: 3 / 1;                 /* wide project tiles */
+
+  /* Logo: global/1.png is a 6250px square with transparent padding.
+     The box below shows its drawn area (x 1317–4653, y 1208–4706). */
+  --logo-h: clamp(64px, 6vw, 100px);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--plum);
+  font-family: var(--font-ui);
+  overflow-x: clip;
+}
+
+img { display: block; max-width: 100%; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--plum);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.6vw, 26px);
+  padding: clamp(10px, 0.9vw, 15px) var(--side) clamp(8px, 0.6vw, 10px);
+}
+
+/* Shows only the drawn part of the logo; the artwork itself is unchanged */
+.logo {
+  --s: calc(var(--logo-h) / 3498);
+  display: block;
+  flex: none;
+  width: calc(3336 * var(--s));
+  height: var(--logo-h);
+  overflow: hidden;
+}
+
+.logo img {
+  width: calc(6250 * var(--s));
+  height: calc(6250 * var(--s));
+  max-width: none;
+  margin: calc(-1208 * var(--s)) 0 0 calc(-1317 * var(--s));
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 0.7vw, 12px);
+}
+
+.nav__links a {
+  display: inline-block;
+  padding: 0.2em 0.55em 0.25em;
+  border: 2.5px solid transparent;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: clamp(17px, 1.45vw, 24px);
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.nav__links a[aria-current="page"] { border-color: var(--plum); }
+
+.nav__links a:not([aria-current]):hover { text-decoration: underline; text-underline-offset: 0.2em; }
+
+.social {
+  display: flex;
+  gap: clamp(10px, 1.1vw, 18px);
+  margin-left: auto;
+}
+
+.social a { display: block; color: var(--plum); }
+
+.social svg {
+  display: block;
+  width: clamp(26px, 2.3vw, 38px);
+  height: clamp(26px, 2.3vw, 38px);
+}
+
+.social .box  { fill: var(--plum); }
+.social .line { fill: none; stroke: var(--cream); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.social .dot  { fill: var(--cream); }
+
+/* ==========================================================
+   PROJECT TILES
+   ========================================================== */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  padding: 0 var(--side) var(--side);
+}
+
+.tile {
+  display: block;
+  aspect-ratio: var(--tile-ratio);
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;               /* fills the tile without stretching */
+  object-position: var(--pos, 50% 50%);
+}
+
+.tile:focus-visible { outline-width: 3px; outline-offset: 3px; border-radius: var(--radius); }
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 640px) {
+  :root { --gap: 8px; --radius: 16px; --tile-ratio: 2 / 1; }
+
+  .topbar { flex-wrap: wrap; row-gap: 6px; }
+  .nav__links a { font-size: 16px; padding: 0.2em 0.5em; }
+
+  .projects { grid-template-columns: minmax(0, 1fr); }
+}
