@@ -38,8 +38,8 @@
 .panel--stickers { aspect-ratio: 1448 / 1086; }
 .panel--patch    { aspect-ratio: 1 / 1; }
 
-/* Row 3: hat, mug, card in the reference's proportions */
-.row--trio { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1.4fr); }
+/* Row 3: hat, card, mug — each keeps its panel proportions */
+.row--trio { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr) minmax(0, 1fr); }
 .panel--hat  { aspect-ratio: 1.2 / 1; }
 .panel--mug  { aspect-ratio: 1 / 1; }
 .panel--card { aspect-ratio: 1.4 / 1; }
