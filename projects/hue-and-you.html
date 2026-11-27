@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../css/work.css">
   <link rel="stylesheet" href="../css/project.css">
   <!-- This page only: the main photo is very wide (2:1), so the right side of
-       the top row stacks it above the laptop and pin. Together they match the
+       the top row stacks it above the social graphic and pin. Together they match the
        information box's height without cropping the photo's edges. -->
   <style>
     .info--large { font-size: clamp(16px, 1.3vw, 22px); }   /* slightly larger so the text fills the box */
@@ -65,7 +65,7 @@
        ========================================================= -->
   <main class="project">
 
-    <!-- Row 1: information + (main photo above Etsy laptop and enamel pin) -->
+    <!-- Row 1: information + (main photo above social graphic and enamel pin) -->
     <div class="row row--intro">
       <article class="info info--large organic">
         <h1 class="info__title">Hue &amp; You</h1>
@@ -92,10 +92,10 @@
         <figure class="panel panel--hero organic" style="--pos: 50% 50%">
           <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/hero.png" width="1774" height="887" alt="Hue &amp; You Etsy listing on a laptop, with mascot stickers, enamel pin card, coffee mug and markers">
                 </figure>
-        <!-- Etsy laptop + enamel pin; widths follow each photo's proportions so both share one height -->
-        <div class="row row--custom" style="--cols: minmax(0, 1.2496fr) minmax(0, 1fr)">
-          <figure class="panel organic" style="--ar: 1402 / 1122">
-            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/laptop.png" width="1402" height="1122" alt="Hue &amp; You Etsy product listing on a laptop" loading="lazy">
+        <!-- Social graphic + enamel pin -->
+        <div class="row row--custom" style="--cols: minmax(0, 1fr) minmax(0, 1fr)">
+          <figure class="panel organic" style="--ar: 1 / 1">
+            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/graphic.png" width="1254" height="1254" alt="Hue &amp; You social media graphic" loading="lazy">
           </figure>
           <figure class="panel organic" style="--ar: 1 / 1">
             <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/pin.png" width="1254" height="1254" alt="Hue &amp; You mascot enamel pin on a backing card" loading="lazy">
@@ -104,11 +104,11 @@
       </div>
     </div>
 
-    <!-- Row 2: social graphic, tall phone wallpaper, sticker collage.
+    <!-- Row 2: Etsy laptop, tall phone wallpaper, sticker collage.
          Widths follow each photo's proportions so all three share one height uncropped. -->
-    <div class="row row--custom" style="--cols: minmax(0, 1fr) minmax(0, 0.5628fr) minmax(0, 1fr)">
-      <figure class="panel organic" style="--ar: 1 / 1">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/graphic.png" width="1254" height="1254" alt="Hue &amp; You social media graphic" loading="lazy">
+    <div class="row row--custom" style="--cols: minmax(0, 1.2496fr) minmax(0, 0.5628fr) minmax(0, 1fr)">
+      <figure class="panel organic" style="--ar: 1402 / 1122">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/laptop.png" width="1402" height="1122" alt="Hue &amp; You Etsy product listing on a laptop" loading="lazy">
       </figure>
       <figure class="panel organic" style="--ar: 941 / 1672">
         <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/phone.png" width="941" height="1672" alt="Hue &amp; You phone wallpaper" loading="lazy">
