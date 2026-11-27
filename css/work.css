@@ -18,7 +18,7 @@
 
   /* Logo: global/1.png is a 6250px square with transparent padding.
      The box below shows its drawn area (x 1317–4653, y 1208–4706). */
-  --logo-h: clamp(64px, 6vw, 100px);
+  --logo-h: clamp(84px, 9vw, 150px);
 }
 
 *,
@@ -153,8 +153,17 @@ a { color: inherit; }
    ========================================================== */
 
 @media (max-width: 640px) {
-  .topbar { flex-wrap: wrap; row-gap: 6px; }
-  .nav__links a { font-size: 16px; padding: 0.2em 0.5em; }
+  :root { --logo-h: 76px; }
+  .topbar { flex-wrap: wrap; row-gap: 6px; gap: 10px; }
+  .nav__links a { font-size: 16px; padding: 0.2em 0.4em; }
+  .social { gap: 8px; }
+  .social svg { width: 24px; height: 24px; }
 
   .projects { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Very narrow phones: keep logo, nav and icons on one line */
+@media (max-width: 380px) {
+  :root { --logo-h: 64px; }
+  .nav__links a { font-size: 15px; }
 }
