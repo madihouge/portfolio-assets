@@ -66,14 +66,14 @@ a { color: inherit; }
 .hero__stage {
   /* Design frame (desktop + tablet) */
   --frame: 1665;
-  --H: 632;                      /* stage height in design units */
+  --H: 726.5;                    /* stage height in design units */
   --u: calc(100cqw / var(--frame));
 
   --letter-top: 43;              /* houge-clean.svg has built-in top padding */
   --letter-width: 1119;
-  --scene-top: 247.75;           /* bottom stays at 635.5 */
-  --scene-width: 775.5;
-  --cloud-top: 370;
+  --scene-top: 320;
+  --scene-width: 820;
+  --cloud-top: 464.5;
   --cloud-height: 262;
 
   position: relative;
@@ -330,12 +330,12 @@ a { color: inherit; }
 @media (max-width: 640px) {
   .hero__stage {
     --frame: 1000;
-    --H: 676;
+    --H: 754;
     --letter-top: 113;
     --letter-width: 871;
-    --scene-top: 291;             /* bottom stays at 676 */
-    --scene-width: 770;
-    --cloud-top: 386;
+    --scene-top: 347;
+    --scene-width: 814;
+    --cloud-top: 464;
     --cloud-height: 290;
   }
 
