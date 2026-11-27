@@ -17,7 +17,11 @@
        the top row stacks it above the social graphic and pin. Together they match the
        information box's height without cropping the photo's edges. -->
   <style>
-    .info--large { font-size: clamp(16px, 1.3vw, 26px); }   /* slightly larger so the text fills the box */
+    /* Information box: only as tall as its text (doesn't stretch to the photos),
+       a little wider so the text needs fewer lines */
+    @media (min-width: 1200px) {
+      .row--intro { grid-template-columns: minmax(0, 40fr) minmax(0, 60fr); align-items: start; }
+    }
     .stack { display: flex; flex-direction: column; gap: var(--p-gap); min-width: 0; }
     .stack .panel--hero { aspect-ratio: 2 / 1; min-height: 0; flex: 1 0 auto; }
   </style>
