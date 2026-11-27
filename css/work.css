@@ -9,10 +9,13 @@
 
   --font-ui: "Figtree", "Helvetica Neue", Arial, sans-serif;
 
-  --side: clamp(14px, 2.35vw, 40px);   /* outer page margin  */
-  --gap: 10px;                         /* between tiles      */
-  --radius: 20px;
-  --tile-ratio: 3 / 1;                 /* wide project tiles */
+  --side: clamp(14px, 2.35vw, 40px);   /* header side margin */
+
+  /* Tiles: same sizes as the homepage gallery */
+  --gallery-gap: 8px;
+  --gallery-radius: 16px;
+  --gallery-margin: clamp(8px, 1.5vw, 25px);
+  --wide-ratio: 16 / 7;                /* full-width 5th tile */
 
   /* Logo: global/1.png is a 6250px square with transparent padding.
      The box below shows its drawn area (x 1317–4653, y 1208–4706). */
@@ -126,15 +129,20 @@ a { color: inherit; }
 .projects {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--gap);
-  padding: 0 var(--side) var(--side);
+  gap: var(--gallery-gap);
+  padding: 0 var(--gallery-margin) var(--gallery-margin);
 }
 
 .tile {
   display: block;
-  aspect-ratio: var(--tile-ratio);
+  aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: var(--radius);
+  border-radius: var(--gallery-radius);
+}
+
+.tile--wide {
+  grid-column: 1 / -1;
+  aspect-ratio: var(--wide-ratio);
 }
 
 .tile img {
@@ -144,15 +152,13 @@ a { color: inherit; }
   object-position: var(--pos, 50% 50%);
 }
 
-.tile:focus-visible { outline-width: 3px; outline-offset: 3px; border-radius: var(--radius); }
+.tile:focus-visible { outline-width: 3px; outline-offset: 3px; border-radius: var(--gallery-radius); }
 
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
 
 @media (max-width: 640px) {
-  :root { --gap: 8px; --radius: 16px; --tile-ratio: 2 / 1; }
-
   .topbar { flex-wrap: wrap; row-gap: 6px; }
   .nav__links a { font-size: 16px; padding: 0.2em 0.5em; }
 
