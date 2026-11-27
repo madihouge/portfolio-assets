@@ -8,6 +8,10 @@
   --plum: #670824;           /* nav text, pill, icons      */
 
   --font-ui: "Figtree", "Helvetica Neue", Arial, sans-serif;
+  --font-label: "Mali", "Comic Sans MS", cursive;   /* same as homepage labels */
+  --gold: #FFC336;                                  /* label (from star.png)    */
+  --plum-dark: #5B0E32;                             /* label text               */
+  --hover-fade: 250ms;
 
   --side: clamp(14px, 2.35vw, 40px);   /* header side margin */
 
@@ -133,17 +137,67 @@ a { color: inherit; }
 }
 
 .tile {
+  position: relative;
   display: block;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: var(--gallery-radius);
 }
 
-.tile img {
+.tile__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;               /* fills the tile without stretching */
   object-position: var(--pos, 50% 50%);
+}
+
+/* Hover effect — same as the homepage gallery */
+.tile__img--hover {
+  object-position: 50% 50%;
+  opacity: 0;
+  transition: opacity var(--hover-fade) ease;
+}
+
+.tile__label {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(12px, 1.6vw, 22px);
+  transform: translateX(-50%);
+  max-width: calc(100% - 24px);
+  padding: 0.4em 1.1em 0.45em;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--plum-dark);
+  font-family: var(--font-label);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: opacity var(--hover-fade) ease;
+}
+
+.tile:hover .tile__img--hover,
+.tile:hover .tile__label,
+.tile:focus-visible .tile__img--hover,
+.tile:focus-visible .tile__label { opacity: 1; }
+
+/* Touch screens and phones: show the photo with its label, no hover needed */
+@media (hover: none), (max-width: 640px) {
+  .tile__label { opacity: 1; }
+  .tile:hover .tile__img--hover,
+  .tile:focus-visible .tile__img--hover { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile__img--hover,
+  .tile__label { transition: none; }
 }
 
 .tile:focus-visible { outline-width: 3px; outline-offset: 3px; border-radius: var(--gallery-radius); }

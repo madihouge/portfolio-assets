@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&family=Mali:ital,wght@1,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/work.css">
 </head>
@@ -49,7 +49,9 @@
 
   <!-- =========================================================
        PROJECTS
-       To swap a photo, change the src of its <img>.
+       To swap a photo, change the src of its first <img>.
+       On hover each tile fades to <folder>/hover.png (skipped until that
+       file exists) and shows its label, same as the homepage.
        --pos sets which part of the photo shows in the tile.
        TODO: create the project pages these links point to.
        ========================================================= -->
@@ -60,25 +62,35 @@
 
       <!-- Row 1 -->
       <a class="tile" href="projects/happy-trails.html" style="--pos: 50% 42%">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/happy-trails/hat.png" alt="Happy Trails — embroidered cap" loading="lazy">
+        <img class="tile__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/happy-trails/hat.png" alt="Happy Trails — embroidered cap" loading="lazy">
+        <img class="tile__img tile__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/happy-trails/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="tile__label">Happy Trails / Branding</span>
       </a>
 
       <a class="tile" href="projects/cowgirls-and-angels.html" style="--pos: 50% 40%">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/sticker.png" alt="Cowgirls &amp; Angels — cowboy boot sticker" loading="lazy">
+        <img class="tile__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/sticker.png" alt="Cowgirls &amp; Angels — cowboy boot sticker" loading="lazy">
+        <img class="tile__img tile__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="tile__label">Cowgirls &amp; Angels / Packaging</span>
       </a>
 
       <!-- Row 2 -->
       <a class="tile" href="projects/lilac.html" style="--pos: 50% 35%">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/lilac/sign.png" alt="Lilac Beauty — storefront sign" loading="lazy">
+        <img class="tile__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/lilac/sign.png" alt="Lilac Beauty — storefront sign" loading="lazy">
+        <img class="tile__img tile__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/lilac/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="tile__label">Lilac Beauty / Packaging</span>
       </a>
 
       <a class="tile" href="projects/hue-and-you.html" style="--pos: 50% 45%">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/sticker.png" alt="Hue and You — character stickers" loading="lazy">
+        <img class="tile__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/sticker.png" alt="Hue and You — character stickers" loading="lazy">
+        <img class="tile__img tile__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="tile__label">Hue and You / Branding · Social Media</span>
       </a>
 
       <!-- Row 3 -->
       <a class="tile" href="projects/love-mads.html" style="--pos: 50% 50%">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/love-mads/sitcker.png" alt="Love Mads — round sticker" loading="lazy">
+        <img class="tile__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/love-mads/sitcker.png" alt="Love Mads — round sticker" loading="lazy">
+        <img class="tile__img tile__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/love-mads/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="tile__label">Love Mads / Branding</span>
       </a>
 
     </section>
