@@ -13,17 +13,23 @@
   <!-- Shared header styles from the Work page, then project-page styles -->
   <link rel="stylesheet" href="../css/work.css">
   <link rel="stylesheet" href="../css/project.css">
-  <!-- This page only: the main photo is very wide (2:1), so the right side of
-       the top row stacks it above the social graphic and pin. Together they match the
-       information box's height without cropping the photo's edges. -->
+  <!-- This page only: the main photo is very wide (2:1) and the description is long,
+       so the gallery is two columns that end level: the information box with photos
+       beneath it on the left, the main photo with photos beneath it on the right. -->
   <style>
-    /* Information box: only as tall as its text (doesn't stretch to the photos),
-       a little wider so the text needs fewer lines */
-    @media (min-width: 1200px) {
-      .row--intro { grid-template-columns: minmax(0, 40fr) minmax(0, 60fr); align-items: start; }
+    .cols { display: grid; grid-template-columns: minmax(0, 46fr) minmax(0, 54fr); gap: var(--p-gap); }
+    .col { display: flex; flex-direction: column; gap: var(--p-gap); min-width: 0; }
+    .col .panel--hero { aspect-ratio: 2 / 1; min-height: 0; }
+    /* The two columns end level: the sticker collage (a repeating pattern) stretches
+       to close any small leftover gap; the main photo only if the right side is short. */
+    .col--left .panel--fill { flex: 1 0 auto; }
+    .col--right .panel--hero { flex: 1 0 auto; }
+    /* Tablets and phones: one column, sticker collage moved to the end */
+    @media (max-width: 1199px) {
+      .cols { grid-template-columns: minmax(0, 1fr); }
+      .col { display: contents; }
+      .col--left .panel--fill { order: 1; flex: none; }
     }
-    .stack { display: flex; flex-direction: column; gap: var(--p-gap); min-width: 0; }
-    .stack .panel--hero { aspect-ratio: 2 / 1; min-height: 0; flex: 1 0 auto; }
   </style>
 </head>
 <body>
@@ -69,58 +75,57 @@
        ========================================================= -->
   <main class="project">
 
-    <!-- Row 1: information + (main photo above social graphic and enamel pin) -->
-    <div class="row row--intro">
-      <article class="info info--large organic">
-        <h1 class="info__title">Hue &amp; You</h1>
-        <p class="info__year">Branding &amp; Social Media</p>
+    <div class="cols">
+      <!-- Left: information box, photos beneath -->
+      <div class="col col--left">
+        <article class="info info--large organic">
+          <h1 class="info__title">Hue &amp; You</h1>
+          <p class="info__year">Branding &amp; Social Media</p>
 
-        <div class="info__body">
-          <p>Hue &amp; You is a coloring book brand centered around creativity, mindfulness, and finding joy in everyday moments. The visual identity combines playful typography, soft purple tones, organic shapes, and an expressive mascot to create a welcoming and approachable personality.</p>
-          <p>The brand identity extends across social media graphics, digital wallpapers, illustrated merchandise, and Etsy product listings. Each design reinforces a consistent visual identity while encouraging people of all ages to slow down, unwind, and enjoy coloring.</p>
-        </div>
-
-        <dl class="info__meta">
-          <div>
-            <dt>Project scope</dt>
-            <dd>Visual Identity, Mascot Design, Illustration, Social Media Design, Digital Marketing Graphics &amp; Merchandise Design.</dd>
+          <div class="info__body">
+            <p>Hue &amp; You is a coloring book brand centered around creativity, mindfulness, and finding joy in everyday moments. The visual identity combines playful typography, soft purple tones, organic shapes, and an expressive mascot to create a welcoming and approachable personality.</p>
+            <p>The brand identity extends across social media graphics, digital wallpapers, illustrated merchandise, and Etsy product listings. Each design reinforces a consistent visual identity while encouraging people of all ages to slow down, unwind, and enjoy coloring.</p>
           </div>
-          <div>
-            <dt>Design</dt>
-            <dd>Madi Houge</dd>
-          </div>
-        </dl>
-      </article>
 
-      <div class="stack">
-        <figure class="panel panel--hero organic" style="--pos: 50% 50%">
+          <dl class="info__meta">
+            <div>
+              <dt>Project scope</dt>
+              <dd>Visual Identity, Mascot Design, Illustration, Social Media Design, Digital Marketing Graphics &amp; Merchandise Design.</dd>
+            </div>
+            <div>
+              <dt>Design</dt>
+              <dd>Madi Houge</dd>
+            </div>
+          </dl>
+        </article>
+        <figure class="panel panel--fill organic" style="--ar: 1254 / 1254">
+          <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/sticker.png" width="1254" height="1254" alt="Collage of Hue &amp; You mascot stickers" loading="lazy">
+        </figure>
+      </div>
+      <!-- Right: main photo, photos beneath -->
+      <div class="col col--right">
+        <figure class="panel panel--hero organic">
           <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/hero.png" width="1774" height="887" alt="Hue &amp; You Etsy listing on a laptop, with mascot stickers, enamel pin card, coffee mug and markers">
-                </figure>
-        <!-- Social graphic + enamel pin, shown 6:5 (only plain background trimmed top and bottom)
-             so this column — and the information box beside it — stays compact -->
-        <div class="row row--custom" style="--cols: minmax(0, 1fr) minmax(0, 1fr)">
-          <figure class="panel organic" style="--ar: 6 / 5; --pos: 50% 45%">
+        </figure>
+        <!-- graphic + pin (widths follow each photo's proportions, so they share one height) -->
+        <div class="row row--custom" style="--cols: minmax(0, 1.0000fr) minmax(0, 1.0000fr)">
+          <figure class="panel organic" style="--ar: 1254 / 1254">
             <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/graphic.png" width="1254" height="1254" alt="Hue &amp; You social media graphic" loading="lazy">
           </figure>
-          <figure class="panel organic" style="--ar: 6 / 5; --pos: 50% 50%">
+          <figure class="panel organic" style="--ar: 1254 / 1254">
             <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/pin.png" width="1254" height="1254" alt="Hue &amp; You mascot enamel pin on a backing card" loading="lazy">
           </figure>
         </div>
+        <!-- laptop + phone (widths follow each photo's proportions, so they share one height) -->
+        <div class="row row--custom" style="--cols: minmax(0, 1.2496fr) minmax(0, 0.5628fr)">
+          <figure class="panel organic" style="--ar: 1402 / 1122">
+            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/laptop.png" width="1402" height="1122" alt="Hue &amp; You Etsy product listing on a laptop" loading="lazy">
+          </figure>
+          <figure class="panel organic" style="--ar: 941 / 1672">
+            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/phone.png" width="941" height="1672" alt="Hue &amp; You phone wallpaper" loading="lazy">
+          </figure>
+        </div>
       </div>
-    </div>
-
-    <!-- Row 2: Etsy laptop, tall phone wallpaper, sticker collage.
-         Widths follow each photo's proportions so all three share one height uncropped. -->
-    <div class="row row--custom" style="--cols: minmax(0, 1.2496fr) minmax(0, 0.5628fr) minmax(0, 1fr)">
-      <figure class="panel organic" style="--ar: 1402 / 1122">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/laptop.png" width="1402" height="1122" alt="Hue &amp; You Etsy product listing on a laptop" loading="lazy">
-      </figure>
-      <figure class="panel organic" style="--ar: 941 / 1672">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/phone.png" width="941" height="1672" alt="Hue &amp; You phone wallpaper" loading="lazy">
-      </figure>
-      <figure class="panel organic" style="--ar: 1 / 1">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/sticker.png" width="1254" height="1254" alt="Collage of Hue &amp; You mascot stickers" loading="lazy">
-      </figure>
     </div>
 
   </main>
