@@ -129,7 +129,7 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gallery-gap);
-  padding: 0 var(--gallery-margin) var(--gallery-margin);
+  padding: clamp(18px, 2.2vw, 36px) var(--gallery-margin) var(--gallery-margin);   /* space below the nav */
 }
 
 .tile {
