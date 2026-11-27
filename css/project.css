@@ -44,6 +44,12 @@
 .panel--hat  { aspect-ratio: 1.2 / 1; }
 .panel--patch { aspect-ratio: 1 / 1; }
 
+/* Rows whose columns are set on the page itself (style="--cols: …"),
+   with each panel's shape set by style="--ar: …" (usually the photo's
+   own width / height, so nothing is cropped). */
+.row--custom { grid-template-columns: var(--cols); }
+.panel[style*="--ar"] { aspect-ratio: var(--ar); }
+
 /* ---------- Panels ---------- */
 
 .panel {
@@ -74,6 +80,9 @@
   line-height: 1.55;
   text-align: left;
 }
+
+/* Larger reading size for shorter descriptions (fills the box comfortably) */
+.info--large { font-size: clamp(15px, 1.2vw, 19px); }
 
 .info__title {
   margin: 0;
@@ -115,7 +124,10 @@
 /* Phones: one column, every photo at its own proportions */
 @media (max-width: 640px) {
   .row--pair,
-  .row--trio { grid-template-columns: minmax(0, 1fr); }
+  .row--trio,
+  .row--custom { grid-template-columns: minmax(0, 1fr); }
+
+  .panel[style*="--ar"] { aspect-ratio: auto; }
 
   .panel--stickers,
   .panel--patch,

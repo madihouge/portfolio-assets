@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cowgirls &amp; Angels — Madi Houge</title>
+  <meta name="description" content="Cowgirls &amp; Angels: Western-inspired boutique packaging design by Madi Houge.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared header styles from the Work page, then project-page styles -->
+  <link rel="stylesheet" href="../css/work.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       HEADER (same as the Work page, with Work selected)
+       ========================================================= -->
+  <header class="topbar">
+    <a class="logo" href="../index.html" aria-label="Madi Houge — home">
+      <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/global/1.png" width="6250" height="6250" alt="">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="../work.html" aria-current="page">work</a></li>
+        <!-- TODO: change href to "../about.html" once the About page exists -->
+        <li><a href="#" data-future-page="about">about</a></li>
+        <!-- TODO: change href to "../contact.html" once the Contact page exists -->
+        <li><a href="#" data-future-page="contact">contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Social icons (TODO: add real profile URLs in the href attributes) -->
+    <ul class="social">
+      <li>
+        <a href="#" data-social="instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect class="box" x="1" y="1" width="22" height="22" rx="5"/><rect class="line" x="5" y="5" width="14" height="14" rx="4"/><circle class="line" cx="12" cy="12" r="3.3"/><circle class="dot" cx="16.1" cy="7.9" r="0.95"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-social="linkedin" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect class="box" x="1" y="1" width="22" height="22" rx="5"/><path class="line" d="M7.6 10.4v6.6M7.6 7v.2M11.4 17v-6.6m0 3c0-1.8 1.1-3.1 2.7-3.1s2.4 1.1 2.4 2.9V17"/></svg>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <!-- =========================================================
+       PROJECT GALLERY
+       Panels get their hand-cut shapes from js/organic.js.
+       To swap a photo, change the src of its <img>; --pos sets
+       which part of the photo stays visible if it's trimmed.
+       ========================================================= -->
+  <main class="project">
+
+    <!-- Row 1: information + main packaging collection -->
+    <div class="row row--intro">
+      <article class="info info--large organic">
+        <h1 class="info__title">Cowgirls &amp; Angels</h1>
+
+        <div class="info__body">
+          <p>Cowgirls &amp; Angels is a Western-inspired boutique packaging project that combines rustic charm with feminine elegance. The design draws inspiration from traditional Western details, warm desert tones, delicate botanical illustrations, and vintage typography.</p>
+          <p>The packaging collection features a warm palette of cream, terracotta, and deep brown, paired with illustrated cowboy boots, stars, and floral elements. Each piece is designed to create a cohesive and thoughtful shopping and unboxing experience that feels personal, welcoming, and timeless.</p>
+        </div>
+
+        <dl class="info__meta">
+          <div>
+            <dt>Packaging Design</dt>
+            <dd>Madi Houge</dd>
+          </div>
+          <div>
+            <dt>Project Deliverables</dt>
+            <dd>Shopping bag, mailer box, hang tags, custom tissue paper, sticker, and thank-you card.</dd>
+          </div>
+        </dl>
+      </article>
+
+      <figure class="panel panel--hero organic" style="--pos: 50% 50%">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/hero.png" width="1535" height="1024" alt="Cowgirls &amp; Angels packaging collection: shopping bag with tissue paper, mailer box, hang tags, boot sticker and thank-you card">
+      </figure>
+    </div>
+
+    <!-- Row 2: hang tags (larger) + boot sticker -->
+    <div class="row row--custom" style="--cols: minmax(0, 1.5fr) minmax(0, 1fr)">
+      <figure class="panel organic" style="--ar: 1535 / 1024">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/tags.png" width="1535" height="1024" alt="Cowgirls &amp; Angels hang tags: boutique tag and thank-you tag" loading="lazy">
+      </figure>
+      <figure class="panel organic" style="--ar: 1 / 1">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/sticker.png" width="1254" height="1254" alt="Round cowboy boot sticker" loading="lazy">
+      </figure>
+    </div>
+
+    <!-- Row 3: mailer box, tissue paper, shopping bag -->
+    <div class="row row--custom" style="--cols: repeat(3, minmax(0, 1fr))">
+      <figure class="panel organic" style="--ar: 1402 / 1122">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/gift-box.png" width="1402" height="1122" alt="Terracotta Cowgirls &amp; Angels mailer box" loading="lazy">
+      </figure>
+      <figure class="panel organic" style="--ar: 1402 / 1122">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/tissue-paper.png" width="1402" height="1122" alt="Custom tissue paper with cowboy boots, stars and botanicals" loading="lazy">
+      </figure>
+      <figure class="panel organic" style="--ar: 1402 / 1122">
+        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/bag.png" width="1402" height="1122" alt="Cowgirls &amp; Angels shopping bag with hang tag" loading="lazy">
+      </figure>
+    </div>
+
+  </main>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/organic.js"></script>
+</body>
+</html>
