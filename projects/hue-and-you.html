@@ -17,18 +17,18 @@
        so the gallery is two columns that end level: the information box with photos
        beneath it on the left, the main photo with photos beneath it on the right. -->
   <style>
-    .cols { display: grid; grid-template-columns: minmax(0, 48fr) minmax(0, 52fr); gap: var(--p-gap); }
+    .cols { display: grid; grid-template-columns: minmax(0, 46fr) minmax(0, 54fr); gap: var(--p-gap); }
     .col { display: flex; flex-direction: column; gap: var(--p-gap); min-width: 0; }
     .col .panel--hero { aspect-ratio: 2 / 1; min-height: 0; }
-    /* The two columns end level: any small leftover gap (a few px) is taken up
-       by the information box on the left or the main photo on the right. */
-    .col--left .info,
+    /* The two columns end level: the sticker collage (a repeating pattern) stretches
+       to close any small leftover gap; the main photo only if the right side is short. */
+    .col--left .panel--fill { flex: 1 0 auto; }
     .col--right .panel--hero { flex: 1 0 auto; }
-    /* Tablets and phones: one column; the three small squares move below the main photo */
+    /* Tablets and phones: one column, sticker collage moved to the end */
     @media (max-width: 1199px) {
       .cols { grid-template-columns: minmax(0, 1fr); }
       .col { display: contents; }
-      .col--left .row--squares { order: 1; }
+      .col--left .panel--fill { order: 1; flex: none; }
     }
   </style>
 </head>
@@ -98,24 +98,24 @@
             </div>
           </dl>
         </article>
-        <!-- sticker + pin + graphic (widths follow each photo's proportions, so they share one height) -->
-        <div class="row row--custom row--squares" style="--cols: repeat(3, minmax(0, 1fr))">
-          <figure class="panel organic" style="--ar: 1254 / 1254">
-            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/sticker.png" width="1254" height="1254" alt="Collage of Hue &amp; You mascot stickers" loading="lazy">
-          </figure>
-          <figure class="panel organic" style="--ar: 1254 / 1254">
-            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/pin.png" width="1254" height="1254" alt="Hue &amp; You mascot enamel pin on a backing card" loading="lazy">
-          </figure>
-          <figure class="panel organic" style="--ar: 1254 / 1254">
-            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/graphic.png" width="1254" height="1254" alt="Hue &amp; You social media graphic" loading="lazy">
-          </figure>
-        </div>
+        <figure class="panel panel--fill organic" style="--ar: 1254 / 1254">
+          <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/sticker.png" width="1254" height="1254" alt="Collage of Hue &amp; You mascot stickers" loading="lazy">
+        </figure>
       </div>
       <!-- Right: main photo, photos beneath -->
       <div class="col col--right">
         <figure class="panel panel--hero organic">
           <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/hero.png" width="1774" height="887" alt="Hue &amp; You Etsy listing on a laptop, with mascot stickers, enamel pin card, coffee mug and markers">
         </figure>
+        <!-- graphic + pin (widths follow each photo's proportions, so they share one height) -->
+        <div class="row row--custom" style="--cols: minmax(0, 1.0000fr) minmax(0, 1.0000fr)">
+          <figure class="panel organic" style="--ar: 1254 / 1254">
+            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/graphic.png" width="1254" height="1254" alt="Hue &amp; You social media graphic" loading="lazy">
+          </figure>
+          <figure class="panel organic" style="--ar: 1254 / 1254">
+            <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/pin.png" width="1254" height="1254" alt="Hue &amp; You mascot enamel pin on a backing card" loading="lazy">
+          </figure>
+        </div>
         <!-- laptop + phone (widths follow each photo's proportions, so they share one height) -->
         <div class="row row--custom" style="--cols: minmax(0, 1.2496fr) minmax(0, 0.5628fr)">
           <figure class="panel organic" style="--ar: 1402 / 1122">
