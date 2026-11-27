@@ -127,37 +127,44 @@
 
     <!-- =========================================================
          PROJECT GALLERY
-         To replace a thumbnail, change the src of its <img>.
-         TODO: point each href to its project page once built.
+         Each tile shows <folder>/thumbnail.png and crossfades to
+         <folder>/hover.png on hover. To replace a photo, upload a new
+         file with the same name to the project's folder.
+         Until thumbnail.png exists, the tile falls back to hero.png;
+         until hover.png exists, the hover image is skipped.
+         TODO: create the project pages these links point to.
          ========================================================= -->
     <section id="work" class="gallery" aria-label="Work">
 
       <!-- Row 1 -->
-      <a class="project" href="#" data-project="happy-trails">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/happy-trails/hero.png" alt="Happy Trails branding" loading="lazy">
-        <span class="project__info"><span class="project__name">Happy Trails</span><span class="project__category">Branding</span></span>
+      <a class="project" href="projects/happy-trails.html">
+        <img class="project__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/happy-trails/thumbnail.png" alt="Happy Trails branding" loading="lazy" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/madihouge/portfolio-assets/main/happy-trails/hero.png'">
+        <img class="project__img project__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/happy-trails/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="project__label">Happy Trails / Branding</span>
       </a>
-
-      <a class="project" href="#" data-project="cowgirls-and-angels">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/hero.png" alt="Cowgirls &amp; Angels packaging" loading="lazy">
-        <span class="project__info"><span class="project__name">Cowgirls &amp; Angels</span><span class="project__category">Packaging</span></span>
+      <a class="project" href="projects/cowgirls-and-angels.html">
+        <img class="project__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/thumbnail.png" alt="Cowgirls &amp; Angels packaging" loading="lazy" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/hero.png'">
+        <img class="project__img project__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/cowgirls-and-angels/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="project__label">Cowgirls &amp; Angels / Packaging</span>
       </a>
 
       <!-- Row 2 -->
-      <a class="project" href="#" data-project="love-mads">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/love-mads/hero.png" alt="Love Mads branding" loading="lazy">
-        <span class="project__info"><span class="project__name">Love Mads</span><span class="project__category">Branding</span></span>
+      <a class="project" href="projects/love-mads.html">
+        <img class="project__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/love-mads/thumbnail.png" alt="Love Mads branding" loading="lazy" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/madihouge/portfolio-assets/main/love-mads/hero.png'">
+        <img class="project__img project__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/love-mads/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="project__label">Love Mads / Branding</span>
       </a>
-
-      <a class="project" href="#" data-project="lilac">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/lilac/hero.png" alt="Lilac Beauty packaging" loading="lazy">
-        <span class="project__info"><span class="project__name">Lilac Beauty</span><span class="project__category">Packaging</span></span>
+      <a class="project" href="projects/lilac.html">
+        <img class="project__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/lilac/thumbnail.png" alt="Lilac Beauty packaging" loading="lazy" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/madihouge/portfolio-assets/main/lilac/hero.png'">
+        <img class="project__img project__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/lilac/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="project__label">Lilac Beauty / Packaging</span>
       </a>
 
       <!-- Row 3 (full width) -->
-      <a class="project project--wide" href="#" data-project="hue-and-you">
-        <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/hero.png" alt="Hue and You branding and social media" loading="lazy">
-        <span class="project__info"><span class="project__name">Hue and You</span><span class="project__category">Branding &amp; Social Media</span></span>
+      <a class="project project--wide" href="projects/hue-and-you.html">
+        <img class="project__img" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/thumbnail.png" alt="Hue and You branding and social media" loading="lazy" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/hero.png'">
+        <img class="project__img project__img--hover" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/hover.png" alt="" loading="lazy" onerror="this.remove()">
+        <span class="project__label">Hue and You / Branding · Social Media</span>
       </a>
 
     </section>
