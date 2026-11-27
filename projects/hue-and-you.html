@@ -17,7 +17,7 @@
        the top row stacks it above the social graphic and pin. Together they match the
        information box's height without cropping the photo's edges. -->
   <style>
-    .info--large { font-size: clamp(16px, 1.3vw, 22px); }   /* slightly larger so the text fills the box */
+    .info--large { font-size: clamp(16px, 1.3vw, 26px); }   /* slightly larger so the text fills the box */
     .stack { display: flex; flex-direction: column; gap: var(--p-gap); min-width: 0; }
     .stack .panel--hero { aspect-ratio: 2 / 1; min-height: 0; flex: 1 0 auto; }
   </style>
@@ -92,12 +92,13 @@
         <figure class="panel panel--hero organic" style="--pos: 50% 50%">
           <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/hero.png" width="1774" height="887" alt="Hue &amp; You Etsy listing on a laptop, with mascot stickers, enamel pin card, coffee mug and markers">
                 </figure>
-        <!-- Social graphic + enamel pin -->
+        <!-- Social graphic + enamel pin, shown 6:5 (only plain background trimmed top and bottom)
+             so this column — and the information box beside it — stays compact -->
         <div class="row row--custom" style="--cols: minmax(0, 1fr) minmax(0, 1fr)">
-          <figure class="panel organic" style="--ar: 1 / 1">
+          <figure class="panel organic" style="--ar: 6 / 5; --pos: 50% 45%">
             <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/graphic.png" width="1254" height="1254" alt="Hue &amp; You social media graphic" loading="lazy">
           </figure>
-          <figure class="panel organic" style="--ar: 1 / 1">
+          <figure class="panel organic" style="--ar: 6 / 5; --pos: 50% 50%">
             <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/hue-and-you/pin.png" width="1254" height="1254" alt="Hue &amp; You mascot enamel pin on a backing card" loading="lazy">
           </figure>
         </div>
