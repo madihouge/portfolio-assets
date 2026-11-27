@@ -33,16 +33,16 @@
 .row--intro { grid-template-columns: minmax(0, 33fr) minmax(0, 67fr); }
 .row--intro .panel--hero { min-height: calc((100vw - 2 * var(--p-margin) - var(--p-gap)) * 0.67 / 1.5); }
 
-/* Row 2: business card + patch; widths follow each photo's proportions so nothing is cut off */
-.row--pair { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
-.row--pair .panel--card { aspect-ratio: 1536 / 1024; }
-.panel--patch    { aspect-ratio: 1 / 1; }
+/* Row 2: business card + mug; widths follow each photo's proportions so nothing is cut off */
+.row--pair { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.row--pair .panel--card,
+.row--pair .panel--mug { aspect-ratio: 1536 / 1024; }
 
-/* Row 3: hat, stickers, mug */
+/* Row 3: hat, stickers, patch */
 .row--trio { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.333fr) minmax(0, 1fr); }
 .row--trio .panel--stickers { aspect-ratio: 1448 / 1086; }
 .panel--hat  { aspect-ratio: 1.2 / 1; }
-.panel--mug  { aspect-ratio: 1 / 1; }
+.panel--patch { aspect-ratio: 1 / 1; }
 
 /* ---------- Panels ---------- */
 
