@@ -71,8 +71,8 @@ a { color: inherit; }
 
   --letter-top: 43;              /* houge-clean.svg has built-in top padding */
   --letter-width: 1119;
-  --scene-top: 283;
-  --scene-width: 705;
+  --scene-top: 247.75;           /* bottom stays at 635.5 */
+  --scene-width: 775.5;
   --cloud-top: 370;
   --cloud-height: 262;
 
@@ -333,8 +333,8 @@ a { color: inherit; }
     --H: 676;
     --letter-top: 113;
     --letter-width: 871;
-    --scene-top: 326;
-    --scene-width: 700;
+    --scene-top: 291;             /* bottom stays at 676 */
+    --scene-width: 770;
     --cloud-top: 386;
     --cloud-height: 290;
   }
