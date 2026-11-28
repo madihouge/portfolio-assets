@@ -1,0 +1,145 @@
+/* ==========================================================
+   Madi Houge — About page
+   Recreates about/about - hero.png. Header styles come from
+   work.css; this file switches them to the dark About colors
+   and lays out the hero artwork.
+   ========================================================== */
+
+.page-about {
+  --about-bg: #3E0016;       /* dark maroon from the reference */
+  --about-ink: #230710;      /* bubble text */
+  --cream: #FEF7E5;
+  background: var(--about-bg);
+}
+
+/* ---------- Header on the dark page ---------- */
+
+.page-about .nav__links a { color: var(--cream); }
+.page-about .nav__links a::before { background: var(--cream); }   /* wonky square */
+.page-about .nav__links a:hover,
+.page-about .nav__links a:focus-visible,
+.page-about .nav__links a[aria-current="page"] { color: var(--about-bg); }
+
+.page-about .social a { color: var(--cream); }
+.page-about .social .box  { fill: var(--cream); }
+.page-about .social .line { stroke: var(--about-bg); }
+.page-about .social .dot  { fill: var(--about-bg); }
+
+.page-about :focus-visible { outline-color: var(--cream); }
+
+/* ---------- Hero stage ----------
+   1 design unit (--u) = 1px of the 1665px-wide reference. */
+
+.about {
+  container-type: inline-size;
+  overflow-x: clip;
+}
+
+.about__stage {
+  --u: calc(100cqw / 1665);
+  position: relative;
+  height: calc(1094 * var(--u));
+}
+
+.art {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(var(--w) * var(--u));
+  max-width: none;
+  height: auto;
+}
+
+/* Photo in a circle */
+.portrait {
+  position: absolute;
+  left: calc(585 * var(--u));
+  top: calc(158 * var(--u));
+  width: calc(470 * var(--u));
+  height: calc(470 * var(--u));
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 calc(4 * var(--u)) var(--about-ink);
+  background: #8a8580;
+}
+
+.portrait img {
+  position: absolute;
+  left: -37.5%;     /* framed to match the reference: face centered, head to shoulders */
+  top: -19.5%;
+  width: 160%;
+  max-width: none;
+  height: auto;
+}
+
+/* ---------- Bio speech bubble ---------- */
+
+.bio {
+  position: absolute;
+  left: calc(243 * var(--u));
+  top: calc(710 * var(--u));
+  width: calc(1169.6 * var(--u));
+}
+
+.bio__bubble {
+  width: 100%;
+  height: auto;
+}
+
+/* Text sits inside the bubble's body (below its pointer), centered */
+.bio__text {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 12%;          /* the pointer takes the top ~12% of the bubble image */
+  bottom: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "Outfit", "Figtree", sans-serif;
+  font-weight: 600;
+  font-size: calc(30.5 * var(--u));
+  line-height: 1.38;
+  color: var(--about-ink);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.bio__star {
+  display: inline-block;
+  margin-block: -0.4em;            /* keep the stars from stretching the line spacing */
+  width: calc(46 * var(--u));
+  height: auto;
+  vertical-align: calc(-9 * var(--u));
+  margin: 0 calc(14 * var(--u));
+}
+
+/* ==========================================================
+   RESPONSIVE
+   The artwork keeps the desktop composition and scales down.
+   On phones the bubble moves below the artwork, full width,
+   so the text stays readable.
+   ========================================================== */
+
+@media (max-width: 760px) {
+  /* artwork keeps its scaled height; the bubble flows underneath it */
+  .about__stage { height: auto; padding-top: calc(745 * var(--u)); }
+
+  .bio {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    margin: 4px 8px 24px;
+  }
+
+  .bio__text {
+    left: 5%;
+    right: 5%;
+    font-size: clamp(11.5px, 3.4vw, 15px);
+    line-height: 1.35;
+  }
+
+  .bio__star { width: 1.15em; vertical-align: -0.2em; margin: 0 0.3em; }
+}

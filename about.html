@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Madi Houge</title>
+  <meta name="description" content="About Madi Houge, a graphic designer focused on branding, packaging, and illustration.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@600;700&family=Outfit:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body class="page-about">
+
+  <!-- =========================================================
+       HEADER: logo (links home), navigation, social icons
+       ========================================================= -->
+  <header class="topbar">
+    <a class="logo" href="index.html" aria-label="Madi Houge — home">
+      <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/global/rocket.png?v=2" width="1536" height="1024" alt="">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="work.html">work</a></li>
+        <li><a href="about.html" aria-current="page">about</a></li>
+        <!-- TODO: change href to "contact.html" once the Contact page exists -->
+        <li><a href="#" data-future-page="contact">contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Social icons (TODO: add real profile URLs in the href attributes) -->
+    <ul class="social">
+      <li>
+        <a href="#" data-social="instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect class="box" x="1" y="1" width="22" height="22" rx="5"/><rect class="line" x="5" y="5" width="14" height="14" rx="4"/><circle class="line" cx="12" cy="12" r="3.3"/><circle class="dot" cx="16.1" cy="7.9" r="0.95"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-social="linkedin" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect class="box" x="1" y="1" width="22" height="22" rx="5"/><path class="line" d="M7.6 10.4v6.6M7.6 7v.2M11.4 17v-6.6m0 3c0-1.8 1.1-3.1 2.7-3.1s2.4 1.1 2.4 2.9V17"/></svg>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <!-- =========================================================
+       PROJECTS
+       To swap a photo, change the src of its first <img>.
+       On hover each tile fades to <folder>/hover.png (skipped until that
+       file exists) and shows its label, same as the homepage.
+       --pos sets which part of the photo shows in the tile.
+       TODO: create the project pages these links point to.
+       ========================================================= -->
+    <!-- =========================================================
+       ABOUT HERO — recreated from about/about - hero.png.
+       Every piece is placed with --x / --y (left / top) and --w (width)
+       in the reference's 1665px-wide frame, so it all scales together.
+       ========================================================= -->
+  <main class="about">
+    <h1 class="visually-hidden">About Madi Houge</h1>
+
+    <div class="about__stage">
+        <img class="art art--squiggle" style="--x:72.4; --y:-5.5; --w:1523.5" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/squiggle.png" alt="" aria-hidden="true">
+
+        <!-- Photo in a circle -->
+        <div class="portrait">
+          <img src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/me.JPG" alt="Madi Houge smiling, wearing a burgundy top">
+        </div>
+
+        <img class="art" style="--x:997; --y:98; --w:247.5" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/color-swatch.png" alt="Color swatch fan">
+        <img class="art" style="--x:1236; --y:86.4; --w:302" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/camera.png" alt="Camera">
+        <img class="art" style="--x:1274; --y:242.7; --w:269.9" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/design.png" alt="design, illustrate, create, print">
+        <img class="art" style="--x:989; --y:312.7; --w:334.6" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/backpack.png" alt="Backpack with water bottle">
+        <img class="art" style="--x:1265.6; --y:454.8; --w:300.7" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/books.png" alt="Stack of books">
+        <img class="art" style="--x:1180; --y:223; --w:115.6" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/star.png" alt="" aria-hidden="true">
+        <img class="art" style="--x:421.6; --y:95; --w:251.7" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/shipping-box.png" alt="Shipping box">
+        <img class="art" style="--x:128; --y:107.7; --w:334.6" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/branding.png" alt="branding, packaging, illustration">
+        <img class="art" style="--x:109.7; --y:293; --w:308" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/sketchbooks.png" alt="Sketchbook">
+        <img class="art" style="--x:332.4; --y:383.6; --w:354.6" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/watercolor.png" alt="Watercolor palette">
+        <img class="art" style="--x:311; --y:315.7; --w:192" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/pencil.png" alt="Pencil">
+        <img class="art" style="--x:138; --y:474.4; --w:217.9" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/mug.png" alt="Mug">
+        <img class="art" style="--x:345; --y:43; --w:115.6" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/star.png" alt="" aria-hidden="true">
+        <img class="art" style="--x:587; --y:1.4; --w:496" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/madi_houge%20Badge.png" alt="@madi_houge">
+        <img class="art" style="--x:121.5; --y:441.1; --w:1419.4" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/toolbar.png" alt="Design software toolbar">
+
+        <!-- Bio speech bubble (text is live and editable) -->
+        <div class="bio">
+          <img class="bio__bubble" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/bubble.png" alt="">
+          <p class="bio__text"><span>
+            <img class="bio__star" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/bold-star.png" alt="">
+            I’m Madi — a graphic designer focused on branding, packaging, and illustration. I create bold, thoughtful visuals inspired by the outdoors, everyday moments, and the little details that make life fun.
+            <img class="bio__star" src="https://raw.githubusercontent.com/madihouge/portfolio-assets/main/about/bold-star.png" alt="">
+          </span></p>
+        </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
