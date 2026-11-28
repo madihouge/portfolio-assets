@@ -202,6 +202,12 @@ a { color: inherit; }
 
 .tile:focus-visible { outline-width: 3px; outline-offset: 3px; border-radius: var(--gallery-radius); }
 
+/* Desktop: three squares per row, edge to edge, aligned to the same columns
+   (same as the homepage gallery) */
+@media (min-width: 1025px) {
+  .projects { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
