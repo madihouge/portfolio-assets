@@ -22,7 +22,7 @@
 
   /* Logo: global/rocket.png is 1536 × 1024 with transparent padding.
      The box below shows its drawn area (x 128–1375, y 24–988). */
-  --logo-h: clamp(84px, 9vw, 150px);
+  --logo-h: clamp(72px, 7.6vw, 128px);
 }
 
 *,
@@ -74,6 +74,8 @@ a { color: inherit; }
   --s: calc(var(--logo-h) / 964);
   display: block;
   flex: none;
+  position: relative;
+  top: clamp(4px, 0.7vw, 12px);   /* sits a little lower than the nav line */
   width: calc(1247 * var(--s));
   height: var(--logo-h);
   overflow: hidden;
@@ -213,7 +215,7 @@ a { color: inherit; }
    ========================================================== */
 
 @media (max-width: 640px) {
-  :root { --logo-h: 56px; }   /* rocket is wider than tall: same width as before */
+  :root { --logo-h: 50px; }   /* rocket is wider than tall */
   .topbar { flex-wrap: wrap; row-gap: 6px; gap: 10px; }
   .nav__links a { font-size: 16px; padding: 0.2em 0.4em; }
   .social { gap: 8px; }
@@ -224,6 +226,6 @@ a { color: inherit; }
 
 /* Very narrow phones: keep logo, nav and icons on one line */
 @media (max-width: 380px) {
-  :root { --logo-h: 48px; }
+  :root { --logo-h: 44px; }
   .nav__links a { font-size: 15px; }
 }
