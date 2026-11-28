@@ -20,8 +20,7 @@
   /* Gallery */
   --gallery-gap: 8px;
   --gallery-radius: 16px;
-  --gallery-margin: clamp(8px, 1.5vw, 25px);
-  --wide-ratio: 16 / 7;     /* height of the full-width 5th thumbnail */
+  --gallery-margin: clamp(8px, 8vw, 180px);   /* side space around the gallery (smaller tiles) */
   --gold: #FFC336;          /* project labels (from star.png)  */
   --hover-fade: 250ms;      /* thumbnail crossfade             */
 }
@@ -262,7 +261,7 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gallery-gap);
-  padding: max(2.7vw, 28px) var(--gallery-margin) var(--gallery-margin);
+  padding: max(2.7vw, 28px) var(--gallery-margin) clamp(8px, 1.5vw, 25px);
   scroll-margin-top: 0;
 }
 
@@ -273,11 +272,6 @@ a { color: inherit; }
   overflow: hidden;
   border-radius: var(--gallery-radius);
   text-decoration: none;
-}
-
-.project--wide {
-  grid-column: 1 / -1;
-  aspect-ratio: var(--wide-ratio);
 }
 
 .project__img {
@@ -383,5 +377,5 @@ a { color: inherit; }
   .intro__text { font-size: 14.5px; line-height: 1.7; }
   .intro__line { display: inline; }
 
-  .gallery { grid-template-columns: minmax(0, 1fr); }
+  .gallery { grid-template-columns: minmax(0, 1fr); --gallery-margin: 8px; }
 }
