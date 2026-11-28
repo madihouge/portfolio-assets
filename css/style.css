@@ -288,16 +288,26 @@ a { color: inherit; }
   transition: opacity var(--hover-fade) ease;
 }
 
-/* Small golden label near the bottom center, revealed on hover */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Project label near the bottom center, revealed on hover */
 .project__label {
   position: absolute;
   left: 50%;
   bottom: clamp(12px, 1.6vw, 22px);
   transform: translateX(-50%);
   max-width: calc(100% - 24px);
-  padding: 0.4em 1.1em 0.45em;
-  border-radius: 999px;
-  background: var(--gold);
+  padding: 0.45em 0.9em 0.5em;
+  border: 2px solid #000;
+  border-radius: 10px;          /* rounded rectangle, not a pill */
+  background: var(--label-bg, var(--gold));   /* each project sets its own color */
   color: var(--plum-dark);
   font-family: var(--font-nav);
   font-style: italic;
@@ -310,6 +320,18 @@ a { color: inherit; }
   text-overflow: ellipsis;
   opacity: 0;
   transition: opacity var(--hover-fade) ease;
+}
+
+/* Arrow between the project name and its type */
+.label-arrow {
+  display: inline-block;
+  margin: 0 0.15em;
+  font-family: system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1;
+  vertical-align: -0.05em;
 }
 
 .project:hover .project__img--hover,
