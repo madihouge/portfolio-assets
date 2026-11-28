@@ -331,11 +331,9 @@ a { color: inherit; }
   .project__label { transition: none; }
 }
 
-/* Desktop: three squares per row, edge to edge; the last two are centered */
+/* Desktop: three squares per row, edge to edge, aligned to the same columns */
 @media (min-width: 1025px) {
-  .gallery { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .project { grid-column: span 2; }
-  .project:nth-of-type(4) { grid-column: 2 / span 2; }
+  .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 /* ==========================================================
