@@ -163,14 +163,14 @@ a { color: inherit; }
 
 .star {
   /* --s = visible height of the star; the PNG has transparent padding */
-  height: calc(var(--s) * 1.6 * var(--u));
+  height: calc(var(--s) * 1.36 * var(--u));   /* ~15% smaller than the original sizes */
   width: auto;
   max-width: none;
 }
 
 .dot {
-  width: calc(var(--s) * var(--u));
-  height: calc(var(--s) * var(--u));
+  width: calc(var(--s) * 0.8 * var(--u));     /* 20% smaller than the original sizes */
+  height: calc(var(--s) * 0.8 * var(--u));
   min-width: 3px;
   min-height: 3px;
   border-radius: 50%;
@@ -376,7 +376,7 @@ a { color: inherit; }
     width: calc(120 * var(--u));
   }
 
-  .star { height: calc(var(--s) * 1.1 * var(--u)); }
+  .star { height: calc(var(--s) * 0.94 * var(--u)); }
 
   .intro { padding-top: 22px; }
   .intro__text { font-size: 14.5px; line-height: 1.7; }
