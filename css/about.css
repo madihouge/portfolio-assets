@@ -6,7 +6,7 @@
    ========================================================== */
 
 .page-about {
-  --about-bg: #5D1539;       /* same plum as the homepage hero */
+  --about-bg: #3E0016;       /* dark maroon from the reference */
   --about-ink: #230710;      /* bubble text */
   --cream: #FEF7E5;
   background: var(--about-bg);
@@ -42,8 +42,7 @@
   position: relative;
   width: calc(1665 * var(--u));
   margin-left: calc(-100 * var(--u));
-  margin-top: calc(-22 * var(--u));   /* a little closer to the nav */
-  height: calc(772 * var(--u));
+  height: calc(750 * var(--u));
 }
 
 .art {
