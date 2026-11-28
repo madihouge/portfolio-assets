@@ -51,6 +51,15 @@
   transform: rotate(calc(var(--r, 0) * 1deg));   /* slight tilt where the reference has one */
 }
 
+/* Red ribbon: same 1665 × 944 frame as the reference, behind all artwork */
+.ribbon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: calc(944 * var(--u));
+  pointer-events: none;
+}
+
 /* Photo in a circle: centered at (820, 391), 468 across incl. outline */
 .portrait {
   position: absolute;
