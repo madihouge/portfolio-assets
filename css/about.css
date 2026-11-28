@@ -38,7 +38,7 @@
 .about__stage {
   --u: calc(100cqw / 1665);
   position: relative;
-  height: calc(1094 * var(--u));
+  height: calc(944 * var(--u));   /* same height as the reference */
 }
 
 .art {
@@ -50,13 +50,13 @@
   height: auto;
 }
 
-/* Photo in a circle */
+/* Photo in a circle: centered at (820, 391), 468 across incl. outline */
 .portrait {
   position: absolute;
-  left: calc(585 * var(--u));
-  top: calc(158 * var(--u));
-  width: calc(470 * var(--u));
-  height: calc(470 * var(--u));
+  left: calc(590 * var(--u));
+  top: calc(161 * var(--u));
+  width: calc(460 * var(--u));
+  height: calc(460 * var(--u));
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 0 calc(4 * var(--u)) var(--about-ink);
@@ -72,48 +72,72 @@
   height: auto;
 }
 
-/* ---------- Bio speech bubble ---------- */
+/* ---------- Bio speech bubble ----------
+   Drawn in CSS to match the reference: a blue pill (x 255–1408,
+   y 738–922 incl. outline) with a pointer rising into the toolbar. */
 
 .bio {
+  --bubble: #6CC5FC;
+  --line: calc(5 * var(--u));
   position: absolute;
-  left: calc(243 * var(--u));
-  top: calc(710 * var(--u));
-  width: calc(1169.6 * var(--u));
-}
-
-.bio__bubble {
-  width: 100%;
-  height: auto;
-}
-
-/* Text sits inside the bubble's body (below its pointer), centered */
-.bio__text {
-  position: absolute;
-  left: 4%;
-  right: 4%;
-  top: 12%;          /* the pointer takes the top ~12% of the bubble image */
-  bottom: 3%;
+  z-index: 3;          /* the pointer overlaps the toolbar's lower edge */
+  left: calc(260 * var(--u));
+  top: calc(743 * var(--u));
+  width: calc(1143 * var(--u));
+  height: calc(174 * var(--u));
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 999px;
+  background: var(--bubble);
+  box-shadow: 0 0 0 var(--line) var(--about-ink);
+}
+
+/* pointer: dark outline triangle + blue triangle on top */
+.bio::before,
+.bio::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.bio::before {
+  left: calc(535 * var(--u));
+  top: calc(-46 * var(--u));
+  width: calc(76 * var(--u));
+  height: calc(51 * var(--u));
+  background: var(--about-ink);
+}
+.bio::after {
+  left: calc(542 * var(--u));
+  top: calc(-37 * var(--u));
+  width: calc(62 * var(--u));
+  height: calc(44 * var(--u));
+  background: var(--bubble);
+}
+
+.bio__text {
+  position: relative;
+  z-index: 1;
   margin: 0;
   font-family: "Outfit", "Figtree", sans-serif;
-  font-weight: 600;
-  font-size: calc(30.5 * var(--u));
-  line-height: 1.38;
+  font-weight: 650;
+  font-size: calc(32.2 * var(--u));
+  line-height: calc(41 * var(--u));
   color: var(--about-ink);
   text-align: center;
-  text-wrap: balance;
+  top: calc(-8 * var(--u));
 }
+
+.bio__line { display: block; white-space: nowrap; }
 
 .bio__star {
   display: inline-block;
-  margin-block: -0.4em;            /* keep the stars from stretching the line spacing */
-  width: calc(46 * var(--u));
+  width: calc(44 * var(--u));
   height: auto;
-  vertical-align: calc(-9 * var(--u));
-  margin: 0 calc(14 * var(--u));
+  margin: calc(-12 * var(--u)) calc(22 * var(--u)) calc(-12 * var(--u)) 0;
+  vertical-align: calc(-6 * var(--u));
 }
+.bio__star--end { margin: calc(-12 * var(--u)) 0 calc(-12 * var(--u)) calc(16 * var(--u)); vertical-align: calc(-14 * var(--u)); }
 
 /* ==========================================================
    RESPONSIVE
@@ -131,15 +155,18 @@
     left: auto;
     top: auto;
     width: auto;
-    margin: 4px 8px 24px;
+    height: auto;
+    margin: calc(14px + 30 * var(--u)) 13px 28px;
+    padding: 16px 22px;
+    border-radius: 28px;
+    --line: 3px;
   }
 
-  .bio__text {
-    left: 5%;
-    right: 5%;
-    font-size: clamp(11.5px, 3.4vw, 15px);
-    line-height: 1.35;
-  }
+  .bio::before { left: calc(50% - 16px); top: -21px; width: 32px; height: 22px; }
+  .bio::after  { left: calc(50% - 12px); top: -16px; width: 24px; height: 19px; }
 
-  .bio__star { width: 1.15em; vertical-align: -0.2em; margin: 0 0.3em; }
+  .bio__text { font-size: 15px; line-height: 1.45; }
+  .bio__line { display: inline; white-space: normal; }
+  .bio__star { width: 18px; margin: -4px 6px -4px 0; vertical-align: -3px; }
+  .bio__star--end { margin: -4px 0 -4px 6px; vertical-align: -3px; }
 }
