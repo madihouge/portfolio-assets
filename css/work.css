@@ -107,7 +107,46 @@ a { color: inherit; }
 
 .nav__links a[aria-current="page"] { border-color: var(--plum); }
 
-.nav__links a:not([aria-current]):hover { text-decoration: underline; text-underline-offset: 0.2em; }
+/* Wonky square behind each nav word on hover / keyboard focus.
+   Each link gets a slightly different hand-cut shape and tilt. */
+.nav__links a {
+  position: relative;
+  isolation: isolate;
+  transition: color 150ms ease;
+}
+.nav__links a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2.5px;
+  background: var(--plum);   /* square in the color the words already are */
+  border-radius: 14px 6px 12px 7px / 7px 13px 6px 12px;
+  transform: rotate(-2.5deg) scale(0.9);
+  opacity: 0;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+.nav__links li:nth-child(2) a::before {
+  border-radius: 7px 13px 6px 14px / 12px 6px 13px 7px;
+  transform: rotate(2deg) scale(0.9);
+}
+.nav__links li:nth-child(3) a::before {
+  border-radius: 12px 8px 14px 6px / 6px 14px 8px 11px;
+  transform: rotate(-1.5deg) scale(0.9);
+}
+.nav__links a:hover,
+.nav__links a:focus-visible { color: var(--cream);   /* word turns the page's cream */ }
+.nav__links a:hover::before,
+.nav__links a:focus-visible::before { opacity: 1; transform: rotate(-2.5deg); }
+.nav__links li:nth-child(2) a:hover::before,
+.nav__links li:nth-child(2) a:focus-visible::before { transform: rotate(2deg); }
+.nav__links li:nth-child(3) a:hover::before,
+.nav__links li:nth-child(3) a:focus-visible::before { transform: rotate(-1.5deg); }
+.nav__links a:focus-visible { outline: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav__links a,
+  .nav__links a::before { transition: none; }
+}
 
 .social {
   display: flex;
