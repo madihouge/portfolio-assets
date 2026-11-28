@@ -20,8 +20,8 @@
   --gallery-radius: 16px;
   --gallery-margin: clamp(8px, 1.5vw, 25px);
 
-  /* Logo: global/1.png is a 6250px square with transparent padding.
-     The box below shows its drawn area (x 1317–4653, y 1208–4706). */
+  /* Logo: global/rocket.png is 1536 × 1024 with transparent padding.
+     The box below shows its drawn area (x 128–1375, y 24–988). */
   --logo-h: clamp(84px, 9vw, 150px);
 }
 
@@ -71,19 +71,19 @@ a { color: inherit; }
 
 /* Shows only the drawn part of the logo; the artwork itself is unchanged */
 .logo {
-  --s: calc(var(--logo-h) / 3498);
+  --s: calc(var(--logo-h) / 964);
   display: block;
   flex: none;
-  width: calc(3336 * var(--s));
+  width: calc(1247 * var(--s));
   height: var(--logo-h);
   overflow: hidden;
 }
 
 .logo img {
-  width: calc(6250 * var(--s));
-  height: calc(6250 * var(--s));
+  width: calc(1536 * var(--s));
+  height: calc(1024 * var(--s));
   max-width: none;
-  margin: calc(-1208 * var(--s)) 0 0 calc(-1317 * var(--s));
+  margin: calc(-24 * var(--s)) 0 0 calc(-128 * var(--s));
 }
 
 .nav__links {
@@ -213,7 +213,7 @@ a { color: inherit; }
    ========================================================== */
 
 @media (max-width: 640px) {
-  :root { --logo-h: 76px; }
+  :root { --logo-h: 56px; }   /* rocket is wider than tall: same width as before */
   .topbar { flex-wrap: wrap; row-gap: 6px; gap: 10px; }
   .nav__links a { font-size: 16px; padding: 0.2em 0.4em; }
   .social { gap: 8px; }
@@ -224,6 +224,6 @@ a { color: inherit; }
 
 /* Very narrow phones: keep logo, nav and icons on one line */
 @media (max-width: 380px) {
-  :root { --logo-h: 64px; }
+  :root { --logo-h: 48px; }
   .nav__links a { font-size: 15px; }
 }
