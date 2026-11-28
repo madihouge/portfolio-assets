@@ -48,6 +48,7 @@
   width: calc(var(--w) * var(--u));
   max-width: none;
   height: auto;
+  transform: rotate(calc(var(--r, 0) * 1deg));   /* slight tilt where the reference has one */
 }
 
 /* Photo in a circle: centered at (820, 391), 468 across incl. outline */
@@ -130,15 +131,6 @@
 
 .bio__line { display: block; white-space: nowrap; }
 
-.bio__star {
-  display: inline-block;
-  width: calc(44 * var(--u));
-  height: auto;
-  margin: calc(-12 * var(--u)) calc(22 * var(--u)) calc(-12 * var(--u)) 0;
-  vertical-align: calc(-6 * var(--u));
-}
-.bio__star--end { margin: calc(-12 * var(--u)) 0 calc(-12 * var(--u)) calc(16 * var(--u)); vertical-align: calc(-14 * var(--u)); }
-
 /* ==========================================================
    RESPONSIVE
    The artwork keeps the desktop composition and scales down.
@@ -167,6 +159,4 @@
 
   .bio__text { font-size: 15px; line-height: 1.45; }
   .bio__line { display: inline; white-space: normal; }
-  .bio__star { width: 18px; margin: -4px 6px -4px 0; vertical-align: -3px; }
-  .bio__star--end { margin: -4px 0 -4px 6px; vertical-align: -3px; }
 }
