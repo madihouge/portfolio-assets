@@ -20,7 +20,7 @@
   /* Gallery */
   --gallery-gap: 8px;
   --gallery-radius: 16px;
-  --gallery-margin: clamp(8px, 8vw, 180px);   /* side space around the gallery (smaller tiles) */
+  --gallery-margin: clamp(8px, 1.5vw, 25px);   /* nearly edge to edge */
   --gold: #FFC336;          /* project labels (from star.png)  */
   --hover-fade: 250ms;      /* thumbnail crossfade             */
 }
@@ -261,7 +261,7 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gallery-gap);
-  padding: max(2.7vw, 28px) var(--gallery-margin) clamp(8px, 1.5vw, 25px);
+  padding: max(2.7vw, 28px) var(--gallery-margin) var(--gallery-margin);
   scroll-margin-top: 0;
 }
 
@@ -331,6 +331,13 @@ a { color: inherit; }
   .project__label { transition: none; }
 }
 
+/* Desktop: three squares per row, edge to edge; the last two are centered */
+@media (min-width: 1025px) {
+  .gallery { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .project { grid-column: span 2; }
+  .project:nth-of-type(4) { grid-column: 2 / span 2; }
+}
+
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
@@ -377,5 +384,5 @@ a { color: inherit; }
   .intro__text { font-size: 14.5px; line-height: 1.7; }
   .intro__line { display: inline; }
 
-  .gallery { grid-template-columns: minmax(0, 1fr); --gallery-margin: 8px; }
+  .gallery { grid-template-columns: minmax(0, 1fr); }
 }
